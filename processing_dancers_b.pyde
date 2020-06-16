@@ -1,16 +1,21 @@
+canvas_width = 640
+canvas_height = 800
+
+
 def setup():
-    size(640, 640)
+    size(canvas_width, canvas_height)
     background(255, 255, 255)
 
 
 def draw():
+    random_color_counter = random(1, 10)
     ellipse_size = random(2, 50)
-    fill_translucent = random(10, 60)
+    fill_translucent = random(10, 50)
     stroke_translucent = random(1, 100)
     
     # Toggle color by round
     colorMode(RGB)
-    if (ellipse_size > 25):
+    if (random_color_counter < 5 ):
         # fill in ellipse color
         fill(255, random(100, 120), random(145, 155), fill_translucent)
     else:
@@ -35,3 +40,9 @@ def draw():
         cursor(HAND)
     else: 
         cursor(ARROW)
+    
+            
+def keyPressed():
+    save("dancers.png")
+    print("saved")
+    
