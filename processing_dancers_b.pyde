@@ -10,12 +10,12 @@ def setup():
 def draw():
     random_color_counter = random(1, 10)
     ellipse_size = random(2, 50)
-    fill_translucent = random(10, 50)
-    stroke_translucent = random(1, 100)
+    fill_translucent = random(10, 60)
+    stroke_translucent = random(10, 80)
     
     # Toggle color by round
     colorMode(RGB)
-    if (random_color_counter < 5 ):
+    if (random_color_counter < 5):
         # fill in ellipse color
         fill(255, random(100, 120), random(145, 155), fill_translucent)
     else:
